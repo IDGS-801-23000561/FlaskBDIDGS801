@@ -22,10 +22,13 @@
                     Nombre
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
-                    Apellido paterno
+                    Apellidos
                 </th>
                 <th scope="col" class="px-6 py-3 font-medium">
                     Email
+                </th>
+                <th scope="col" class="px-6 py-3 font-medium">
+                    Telefono
                 </th>
                 <th scope="col" class="px-6 py-3 font-semibold">
                     Editar
@@ -45,10 +48,13 @@
                     {{ alum.nombre}}
                 </th>
                 <td class="px-6 py-4">
-                    {{ alum.apaterno}}
+                    {{ alum.apellidos}}
                 </td>
                 <td class="px-6 py-4">
                     {{alum.email}}
+                </td>
+                <td class="px-6 py-4">
+                    {{alum.telefono}}
                 </td>
                 <td class="px-6 py-4">
                     <a href="modificar?id={{alum.id}}" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">Editar</a>
@@ -57,7 +63,7 @@
                     <a href="detalles?id={{alum.id}}" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">Detalles</a>
                 </td>
                 <td class="px-6 py-4">
-                    <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">Eliminar</a>
+                    <a href="eliminar?id={{alum.id}}" class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">Eliminar</a>
                 </td>
             </tr>
             {%endfor%}

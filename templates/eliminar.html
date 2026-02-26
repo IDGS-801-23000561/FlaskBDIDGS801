@@ -3,7 +3,7 @@
   {%import "_macros.html" as macros%}
   <div class="mt-5">
 
-<form action="{{_url_for('eliminar')}}" method="POST" novalidate class="max-w-md mx-auto mt-5">
+<form action="{{ url_for('eliminar')}}" method="POST" novalidate class="max-w-md mx-auto mt-5">
     {{form.csrf_token}}
     <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
     <div class="relative hidden">
@@ -15,11 +15,15 @@
         class="block w-full px-4 py-3 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-emerald-600 transition-colors duration-200 ease-in-out appearance-none peer")}}  
   </div>
   <div class="relative">
-    {{macros.campoNuevo(form.apaterno,
+    {{macros.campoNuevo(form.apellidos,
         class="block w-full px-4 py-3 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-emerald-600 transition-colors duration-200 ease-in-out appearance-none peer")}}  
   </div>
   <div class="relative">
     {{macros.campoNuevo(form.email,
+        class="block w-full px-4 py-3 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-emerald-600 transition-colors duration-200 ease-in-out appearance-none peer")}}  
+  </div>
+  <div class="relative">
+    {{macros.campoNuevo(form.telefono,
         class="block w-full px-4 py-3 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-emerald-600 transition-colors duration-200 ease-in-out appearance-none peer")}}  
   </div>
 
